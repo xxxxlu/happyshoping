@@ -120,7 +120,8 @@ export default {
 .contact {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 60px 20px;
+  min-height: calc(100vh - 220px);
 }
 
 .contact-container {
@@ -133,17 +134,36 @@ export default {
 .contact-header {
   text-align: center;
   padding: 40px 20px;
-  background-color: #f9f9f9;
+  background: linear-gradient(135deg, var(--primary-light, #02a7a7), var(--primary-dark, #017e7e));
+  color: white;
+  border-radius: 8px 8px 0 0;
 }
 
 .contact-header h1 {
-  margin-bottom: 10px;
-  color: #333;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 2.2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-header h1:after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: white;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
 }
 
 .contact-header p {
-  color: #666;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .contact-content {
@@ -180,10 +200,18 @@ export default {
 
 .form-group input, .form-group textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px 15px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  border-color: var(--primary-color, #017e7e);
+  box-shadow: 0 0 0 3px rgba(1, 126, 126, 0.2);
+  outline: none;
 }
 
 .form-group textarea {
@@ -191,19 +219,23 @@ export default {
 }
 
 .submit-button {
-  background-color: #4CAF50;
+  background: linear-gradient(135deg, var(--primary-light, #02a7a7), var(--primary-dark, #017e7e));
   color: white;
   border: none;
-  padding: 12px 20px;
-  border-radius: 4px;
+  padding: 12px 28px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .submit-button:hover {
-  background-color: #45a049;
+  background: linear-gradient(135deg, var(--primary-dark, #017e7e), var(--primary-light, #02a7a7));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .form-status {

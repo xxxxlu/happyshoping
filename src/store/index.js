@@ -88,71 +88,64 @@ function generateRandomProducts() {
 
   const products = []
 
-  const electronicsItems = [
-    { name: 'Smartphone', basePrice: 15000, maxPrice: 45000, image: 'https://m.media-amazon.com/images/I/71CxUvG46rL._AC_UY436_FMwebp_QL65_.jpg' },
-    { name: 'Headphones', basePrice: 1500, maxPrice: 12000, image: 'https://m.media-amazon.com/images/I/61FUX7QmifS._AC_UY436_FMwebp_QL65_.jpg' },
-    { name: 'Power Bank', basePrice: 800, maxPrice: 5000, image: 'https://m.media-amazon.com/images/I/516tnauVb+L._AC_UY436_FMwebp_QL65_.jpg' },
-    { name: 'Bluetooth Speaker', basePrice: 1200, maxPrice: 8000, image: 'https://m.media-amazon.com/images/I/614l20nEhmL._AC_UY436_FMwebp_QL65_.jpg' },
-    { name: 'Smart Watch', basePrice: 2500, maxPrice: 25000, image: 'https://m.media-amazon.com/images/I/71QA9CUvpzL._AC_UY436_FMwebp_QL65_.jpg' }
-  ]
+// Handicraft Items
+const handicraftItems = [
+  { name: 'Onyx Marble Pear Clock', basePrice: 950, maxPrice: 1500, image: 'https://m.media-amazon.com/images/I/71QesHsV-PL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Wooden Carved Matka', basePrice: 1800, maxPrice: 4500, image: 'https://m.media-amazon.com/images/I/61eu6Zu96VL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Blue Pottery Vase', basePrice: 1200, maxPrice: 3000, image: 'https://m.media-amazon.com/images/I/81G2nglD3vL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Brass Engraved Plate', basePrice: 1500, maxPrice: 4000, image: 'https://m.media-amazon.com/images/I/810NzRh3uwL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Camel Skin Lamp', basePrice: 3500, maxPrice: 12000, image: 'https://m.media-amazon.com/images/I/61gCOHSGt2L._AC_UL640_FMwebp_QL65_.jpg' }
+];
 
-  const clothingItems = [
-    { name: 'Traditional Kurta', basePrice: 1500, maxPrice: 8000, image: 'https://m.media-amazon.com/images/I/71eLPKVGaTL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Shalwar Kameez', basePrice: 2000, maxPrice: 15000, image: 'https://m.media-amazon.com/images/I/61jQJkXlRhL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Embroidered Shawl', basePrice: 1200, maxPrice: 12000, image: 'https://m.media-amazon.com/images/I/6146VPqq0bL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Traditional Cap', basePrice: 500, maxPrice: 3000, image: 'https://m.media-amazon.com/images/I/71bMNEuQAkL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Designer Dupatta', basePrice: 800, maxPrice: 5000, image: 'https://m.media-amazon.com/images/I/71DnT6bds+L._AC_UL640_FMwebp_QL65_.jpg' }
-  ]
+// Textile Items
+const textileItems = [
+  { name: 'Traditional Sindhi Ajrak', basePrice: 1200, maxPrice: 3500, image: 'https://m.media-amazon.com/images/I/81AfuZiltVL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Embroidered Pashmina Shawl', basePrice: 2500, maxPrice: 15000, image: 'https://m.media-amazon.com/images/I/81WTOT5Pe5L._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Sozni Work Pashmina Shawl', basePrice: 3000, maxPrice: 18000, image: 'https://m.media-amazon.com/images/I/61vp1xn0ToL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Plain Pashmina Shawl', basePrice: 1800, maxPrice: 6000, image: 'https://m.media-amazon.com/images/I/81aBQnDRbzL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Ajrak Pattern Cushion Cover', basePrice: 800, maxPrice: 2500, image: 'https://m.media-amazon.com/images/I/81GAuXWHwJL._AC_UL640_FMwebp_QL65_.jpg' }
+];
 
-  const homeItems = [
-    { name: 'Traditional Tea Set', basePrice: 2500, maxPrice: 15000, image: 'https://m.media-amazon.com/images/I/71BcZaGRYRL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Handmade Carpet', basePrice: 5000, maxPrice: 45000, image: 'https://m.media-amazon.com/images/I/81ZuntssZwL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Cushion Covers (Set of 4)', basePrice: 1200, maxPrice: 8000, image: 'https://m.media-amazon.com/images/I/61vkCf3+zeL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Table Runner', basePrice: 800, maxPrice: 5000, image: 'https://m.media-amazon.com/images/I/61Ud4Xq+u2L._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Wall Hanging', basePrice: 1500, maxPrice: 12000, image: 'https://m.media-amazon.com/images/I/8172RgAY+DL._AC_UL640_FMwebp_QL65_.jpg' }
-  ]
+// Clothing Items
+const clothingItems = [
+  { name: 'Traditional Kurta', basePrice: 1500, maxPrice: 8000, image: 'https://m.media-amazon.com/images/I/71eLPKVGaTL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Shalwar Kameez', basePrice: 2000, maxPrice: 15000, image: 'https://m.media-amazon.com/images/I/61qIfsjn5WL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Embroidered Shawl', basePrice: 1200, maxPrice: 12000, image: 'https://m.media-amazon.com/images/I/6146VPqq0bL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Traditional Cap', basePrice: 500, maxPrice: 3000, image: 'https://m.media-amazon.com/images/I/71bMNEuQAkL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Designer Dupatta', basePrice: 800, maxPrice: 5000, image: 'https://m.media-amazon.com/images/I/71DnT6bds+L._AC_UL640_FMwebp_QL65_.jpg' }
+];
 
-  const beautyItems = [
-    { name: 'Henna Kit', basePrice: 500, maxPrice: 3000, image: 'https://m.media-amazon.com/images/I/71nlK3wLNYL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Traditional Perfume Set', basePrice: 1500, maxPrice: 12000, image: 'https://m.media-amazon.com/images/I/41LruIHspoL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Kohl Eyeliner', basePrice: 300, maxPrice: 2000, image: 'https://m.media-amazon.com/images/I/41BGfrwwSwL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Hair Oil Set', basePrice: 800, maxPrice: 5000, image: 'https://m.media-amazon.com/images/I/71akInfGzJL._AC_UL640_FMwebp_QL65_.jpg' }
-  ]
+// Leather Goods
+const leatherItems = [
+  { name: 'Handcrafted Leather Wallet', basePrice: 1200, maxPrice: 3500, image: 'https://m.media-amazon.com/images/I/81ZNoGhb+GL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Leather Sandals', basePrice: 1500, maxPrice: 4500, image: 'https://m.media-amazon.com/images/I/71ZWmV-gGNL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Embossed Leather Journal', basePrice: 1800, maxPrice: 4000, image: 'https://m.media-amazon.com/images/I/81CwYoA0mqL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Traditional Leather Pouf', basePrice: 4500, maxPrice: 12000, image: 'https://m.media-amazon.com/images/I/61q6LsjOkCL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Leather Belt with Brass Buckle', basePrice: 1000, maxPrice: 2500, image: 'https://m.media-amazon.com/images/I/71QTUucV5mL._AC_UL640_FMwebp_QL65_.jpg' }
+];
 
-  const sportsItems = [
-    { name: 'Cricket Bat', basePrice: 2000, maxPrice: 25000, image: 'https://m.media-amazon.com/images/I/71f0YCwN3sL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Cricket Ball Set', basePrice: 800, maxPrice: 5000, image: 'https://m.media-amazon.com/images/I/61IxsaI4dqL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Sports Jersey', basePrice: 1500, maxPrice: 8000, image: 'https://m.media-amazon.com/images/I/91rKXc6vGzL._AC_UL640_FMwebp_QL65_.jpg' }
-  ]
+// Home Decor Items
+const homeDecorItems = [
+  { name: 'Truck Art Miniature', basePrice: 1800, maxPrice: 5000, image: 'https://m.media-amazon.com/images/I/51S0vX-ZYvL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Copper Water Pot', basePrice: 2500, maxPrice: 6000, image: 'https://m.media-amazon.com/images/I/51vbehGrZQL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Brass Door Knocker', basePrice: 1200, maxPrice: 3500, image: 'https://m.media-amazon.com/images/I/51vbehGrZQL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Hand-Knotted Wool Carpet', basePrice: 8000, maxPrice: 45000, image: 'https://m.media-amazon.com/images/I/A1qS4R68xGL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Wooden Carved Wall Panel', basePrice: 3500, maxPrice: 12000, image: 'https://m.media-amazon.com/images/I/81ryITO2J8L._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Brass Engraved Tray', basePrice: 2200, maxPrice: 5500, image: 'https://m.media-amazon.com/images/I/919eLZ2rArL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Handmade Ceramic Plates', basePrice: 1800, maxPrice: 4500, image: 'https://m.media-amazon.com/images/I/81mXhi6C6VL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Traditional Wooden Jewelry Box', basePrice: 2500, maxPrice: 7000, image: 'https://m.media-amazon.com/images/I/81R8LJeu6GL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Marble Inlay Coaster Set', basePrice: 1200, maxPrice: 3000, image: 'https://m.media-amazon.com/images/I/71EmMnt+ilL._AC_UL640_FMwebp_QL65_.jpg' },
+  { name: 'Handwoven Jute Rug', basePrice: 2800, maxPrice: 9000, image: 'https://m.media-amazon.com/images/I/81NYjzUG6WL._AC_UL640_FMwebp_QL65_.jpg' }
+];
 
-  const toysItems = [
-    { name: 'Traditional Doll', basePrice: 1000, maxPrice: 8000, image: 'https://m.media-amazon.com/images/I/91kDv+a7UVL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Wooden Puzzle', basePrice: 800, maxPrice: 5000, image: 'https://m.media-amazon.com/images/I/81wILxVekmL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Board Game', basePrice: 1200, maxPrice: 8000, image: 'https://m.media-amazon.com/images/I/81CA3GV9sXL._AC_UL640_FMwebp_QL65_.jpg' }
-  ]
 
-  const foodItems = [
-    { name: 'Spice Collection', basePrice: 1500, maxPrice: 12000, image: 'https://m.media-amazon.com/images/I/71pvhsDVYJL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Premium Tea Assortment', basePrice: 1200, maxPrice: 8000, image: 'https://m.media-amazon.com/images/I/912A4x7uUYL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Dry Fruit Gift Box', basePrice: 2500, maxPrice: 15000, image: 'https://m.media-amazon.com/images/I/81TRZn27d0L._AC_UL640_FMwebp_QL65_.jpg' }
-  ]
-
-  const jewelryItems = [
-    { name: 'Traditional Necklace', basePrice: 5000, maxPrice: 45000, image: 'https://m.media-amazon.com/images/I/81xt17gEPzL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Bangles Set', basePrice: 1200, maxPrice: 12000, image: 'https://m.media-amazon.com/images/I/61UyMgmyAnL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Earrings', basePrice: 1500, maxPrice: 15000, image: 'https://m.media-amazon.com/images/I/71r5OfkwXeL._AC_UL640_FMwebp_QL65_.jpg' },
-    { name: 'Ring', basePrice: 2000, maxPrice: 25000, image: 'https://m.media-amazon.com/images/I/61npoHPNLHL._AC_UL640_FMwebp_QL65_.jpg' }
-  ]
 
   const allItems = [
-    ...electronicsItems.map(item => ({ ...item, category: 'Electronics' })),
-    ...clothingItems.map(item => ({ ...item, category: 'Clothing' })),
-    ...homeItems.map(item => ({ ...item, category: 'Home & Kitchen' })),
-    ...beautyItems.map(item => ({ ...item, category: 'Beauty & Personal Care' })),
-    ...sportsItems.map(item => ({ ...item, category: 'Sports & Outdoors' })),
-    ...toysItems.map(item => ({ ...item, category: 'Toys & Games' })),
-    ...foodItems.map(item => ({ ...item, category: 'Food & Grocery' })),
-    ...jewelryItems.map(item => ({ ...item, category: 'Jewelry' }))
+    ...handicraftItems.map(item => ({ ...item, category: 'Handicraft' })),
+    ...textileItems.map(item => ({ ...item, category: 'Textile' })),
+    ...leatherItems.map(item => ({ ...item, category: 'Leather' })),
+    ...homeDecorItems.map(item => ({ ...item, category: 'Home Decor' })),
+    ...clothingItems.map(item => ({ ...item, category: 'Clothing' }))
   ]
 
   // Generate 30-35 products

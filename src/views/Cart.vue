@@ -164,18 +164,36 @@ export default {
 .cart-page {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 220px);
 }
 
 h1 {
   text-align: center;
   margin-bottom: 2rem;
-  color: #333;
+  color: var(--primary-dark, #333);
+  font-size: 2.2rem;
+  position: relative;
+}
+
+h1:after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background: var(--primary-color, #017e7e);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
 }
 
 .empty-cart {
   text-align: center;
   padding: 3rem 0;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .empty-cart-icon {
@@ -418,6 +436,7 @@ h1 {
 @media (max-width: 992px) {
   .cart-container {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 

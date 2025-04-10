@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo Circle -->
+  <circle cx="25" cy="25" r="23" fill="url(#gradient)" />
+  
+  <!-- Shopping Bag Symbol -->
+  <path d="M34 19H16C15 19 14 20 14 21V34C14 35 15 36 16 36H34C35 36 36 35 36 34V21C36 20 35 19 34 19Z" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Shopping Bag Handles -->
+  <path d="M20 17C20 14.5 22 12 25 12H25C28 12 30 14.5 30 17V19H20V17Z" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Smiling Face in Bag -->
+  <circle cx="25" cy="25" r="1.5" fill="white" />
+  <path d="M21 29C22 30 28 30 29 29" stroke="white" stroke-width="1.2" stroke-linecap="round" />
+  
+  <!-- Text "HappyShopping" -->
+  <path d="M55 25V18H57V21H61V18H63V32H61V23H57V32H55V25Z" fill="white"/>
+  <path d="M70 32C73 32 75 30 75 25C75 20 73 18 70 18C67 18 65 20 65 25C65 30 67 32 70 32ZM70 30C68 30 67 28 67 25C67 22 68 20 70 20C72 20 73 22 73 25C73 28 72 30 70 30Z" fill="white"/>
+  <path d="M79 32C82 32 84 30 84 25C84 20 82 18 79 18C76 18 74 20 74 25C74 30 76 32 79 32ZM79 30C77 30 76 28 76 25C76 22 77 20 79 20C81 20 82 22 82 25C82 28 81 30 79 30Z" fill="white"/>
+  <path d="M92 32L85 25L92 19H89L83 25L89 32H92Z" fill="white"/>
+  <path d="M95 32V27L92 19H94L96 24.5L98 19H100L97 27V32H95Z" fill="white"/>
+  <path d="M109 31C109 28 108 26 106 25C108 24 109 22 109 19C109 18 109 18 107 18H101V32H107C109 32 109 32 109 31ZM103 20H106C107 20 107 20 107 21C107 22 107 22 106 22H103V20ZM103 24H106C107 24 107 24 107 25C107 26 107 26 106 26H103V24Z" fill="white"/>
+  <path d="M113 32H111V18H113V32Z" fill="white"/>
+  <path d="M120 32C123 32 125 30 125 28C125 26 123 25 123 25C123 25 124 24 124 22C124 20 123 18 120 18H116V32H120ZM118 20H120C121 20 122 20 122 22C122 23 121 23 120 23H118V20ZM118 25H120C121 25 123 25 123 27C123 29 121 30 120 30H118V25Z" fill="white"/>
+  <path d="M134 32C137 32 139 30 139 25C139 20 137 18 134 18C131 18 129 20 129 25C129 30 131 32 134 32ZM134 30C132 30 131 28 131 25C131 22 132 20 134 20C136 20 137 22 137 25C137 28 136 30 134 30Z" fill="white"/>
+  <path d="M146 32C149 32 151 30 151 25C151 20 149 18 146 18C143 18 141 20 141 25C141 30 143 32 146 32ZM146 30C144 30 143 28 143 25C143 22 144 20 146 20C148 20 149 22 149 25C149 28 148 30 146 30Z" fill="white"/>
+  
+  <!-- Tagline -->
+  <path d="M156 26C158 26 160 25 160 23C160 21 158 20 156 20C154 20 152 21 152 23C152 25 154 26 156 26ZM156 25C155 25 154 24 154 23C154 22 155 21 156 21C157 21 158 22 158 23C158 24 157 25 156 25ZM161 30H159V20H161V30ZM165 30H163V20H165V30ZM169 30H167V20H169V30ZM173 30H171V20H173V25C173 27 174 28 175 28C176 28 177 27 177 25V20H179V26C179 29 177 30 175 30C173 30 173 29 173 30Z" fill="white"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF8C00"/>
+      <stop offset="1" stop-color="#FF5722"/>
+    </linearGradient>
+  </defs>
+</svg>

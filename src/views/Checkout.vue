@@ -147,74 +147,144 @@ export default {
 
 <style scoped>
 .checkout {
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 var(--container-padding, 20px) 3rem;
+  min-height: calc(100vh - 240px);
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .checkout h1 {
   text-align: center;
-  margin-bottom: 30px;
+  margin: 1.5rem 0 2rem;
+  color: var(--primary-dark);
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.checkout h1:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--primary-gradient);
+  border-radius: 2px;
 }
 
 .checkout-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .shipping-info, .order-summary {
-  flex: 1;
-  min-width: 300px;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.shipping-info::before, .order-summary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(147, 112, 219, 0.03), rgba(115, 103, 240, 0.06));
+  z-index: 0;
+}
+
+.shipping-info h2, .order-summary h2 {
+  font-size: 1.4rem;
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid rgba(147, 112, 219, 0.15);
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--primary-dark);
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 10px;
+  padding: 0.7rem 1rem;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(147, 112, 219, 0.1);
 }
 
 .form-group textarea {
-  min-height: 80px;
+  min-height: 100px;
+  resize: vertical;
 }
 
 .payment-methods {
   display: flex;
-  gap: 15px;
-  margin-top: 10px;
+  gap: 1rem;
+  margin-top: 0.8rem;
 }
 
 .payment-method {
   flex: 1;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 12px;
+  padding: 0.8rem;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  background-color: white;
+}
+
+.payment-method:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-color: var(--primary-light);
 }
 
 .payment-method.active {
-  border-color: #42b983;
-  background-color: rgba(66, 185, 131, 0.05);
+  border-color: var(--primary-color);
+  background-color: rgba(147, 112, 219, 0.1);
+  box-shadow: 0 5px 15px rgba(147, 112, 219, 0.15);
 }
 
 .payment-logo {
@@ -239,50 +309,160 @@ export default {
 }
 
 .check-mark {
-  color: #42b983;
-  font-size: 1.2em;
+  color: var(--primary-color);
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 .cart-item {
   display: flex;
   justify-content: space-between;
-  padding: 15px 0;
-  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1;
+}
+
+.item-info h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.item-info p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.item-total {
+  font-weight: 600;
+  color: var(--primary-dark);
+  font-size: 1.05rem;
 }
 
 .summary-line {
   display: flex;
   justify-content: space-between;
-  margin: 10px 0;
+  margin: 0.8rem 0;
+  font-size: 1.05rem;
+  color: #666;
+  position: relative;
+  z-index: 1;
 }
 
 .summary-total {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
+  margin-top: 1.8rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(147, 112, 219, 0.15);
+  position: relative;
+  z-index: 1;
 }
 
 .total {
-  font-weight: bold;
-  font-size: 1.2em;
-  margin-top: 10px;
+  font-weight: 700;
+  font-size: 1.3em;
+  margin-top: 1rem;
+  color: var(--primary-dark);
 }
 
 .checkout-button {
   display: block;
   width: 100%;
-  padding: 15px;
-  margin-top: 20px;
-  background-color: #4CAF50;
+  padding: 0.9rem;
+  margin-top: 1.5rem;
+  background: var(--primary-gradient);
   color: white;
   border: none;
-  border-radius: 4px;
-  font-size: 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .checkout-button:hover {
-  background-color: #45a049;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(94, 59, 164, 0.3);
+}
+
+.cart-empty {
+  text-align: center;
+  padding: 2rem 0;
+  color: #666;
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 992px) {
+  .checkout-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout {
+    padding: 0 var(--container-padding, 20px) 2rem;
+  }
+  
+  .checkout h1 {
+    margin: 1rem 0 1.5rem;
+    font-size: 1.7rem;
+  }
+  
+  .shipping-info, .order-summary {
+    padding: 1.2rem;
+  }
+  
+  .payment-methods {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .checkout-container {
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout h1 {
+    font-size: 1.5rem;
+  }
+  
+  .shipping-info h2, .order-summary h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .checkout-button {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+    margin-top: 1.2rem;
+  }
+  
+  .total {
+    font-size: 1.1rem;
+  }
+
+  .summary-line {
+    font-size: 0.95rem;
+    margin: 0.6rem 0;
+  }
 }
 </style>

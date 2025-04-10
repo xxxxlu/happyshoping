@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="250" height="60" viewBox="0 0 250 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo Circle -->
+  <circle cx="30" cy="30" r="28" fill="url(#gradient)" />
+  
+  <!-- Smiling Shopping Bag -->
+  <path d="M40 23H20C18.9 23 18 23.9 18 25V40C18 41.1 18.9 42 20 42H40C41.1 42 42 41.1 42 40V25C42 23.9 41.1 23 40 23Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Shopping Bag Handles -->
+  <path d="M24 21C24 18 26.5 15 30 15H30C33.5 15 36 18 36 21V23H24V21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Smiling Face in Bag -->
+  <circle cx="30" cy="31" r="2" fill="white" />
+  <path d="M25 36C27 38 33 38 35 36" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+  
+  <!-- Text "HappyShopping" -->
+  <path d="M70 30V18H74V22H80V18H84V38H80V26H74V38H70V30Z" fill="url(#textGradient)"/>
+  <path d="M93 38C96 38 98 36 98 33V18H94V32C94 34 93 34 93 34C93 34 92 34 92 32V18H88V33C88 36 90 38 93 38Z" fill="url(#textGradient)"/>
+  <path d="M108 38C111 38 113 36 113 33V18H109V32C109 34 108 34 108 34C108 34 107 34 107 32V18H103V33C103 36 105 38 108 38Z" fill="url(#textGradient)"/>
+  <path d="M122 38L118 33L122 28H117L114 32V18H110V38H114V35L117 38H122Z" fill="url(#textGradient)"/>
+  <path d="M134 38L129 30L134 23H129L124 30L129 38H134Z" fill="url(#textGradient)"/>
+  <path d="M145 38C148 38 150 37 152 35L150 31C149 32 147 33 145 33C142 33 140 31 140 30C140 29 142 27 145 27C147 27 149 28 150 29L152 25C150 23 148 22 145 22C140 22 136 25 136 30C136 35 140 38 145 38Z" fill="url(#textGradient)"/>
+  <path d="M162 38V34H154V30H162V26H154V22H162V18H150V38H162Z" fill="url(#textGradient)"/>
+  <path d="M171 38C176 38 180 35 180 27C180 19 176 16 171 16C166 16 162 19 162 27C162 35 166 38 171 38ZM171 34C168.5 34 166.5 32 166.5 27C166.5 22 168.5 20 171 20C173.5 20 175.5 22 175.5 27C175.5 32 173.5 34 171 34Z" fill="url(#textGradient)"/>
+  <path d="M190 38C193 38 195 36 195 33V18H191V32C191 34 190 34 190 34C190 34 189 34 189 32V18H185V33C185 36 187 38 190 38Z" fill="url(#textGradient)"/>
+  <path d="M204 38C207 38 209 36 209 33V18H205V32C205 34 204 34 204 34C204 34 203 34 203 32V18H199V33C199 36 201 38 204 38Z" fill="url(#textGradient)"/>
+  <path d="M216 38C221 38 224 35 224 32C224 28 220 27 220 27C220 27 223 26 223 23C223 20 220 18 216 18H210V38H216ZM214 22H216C217 22 219 22 219 23C219 24 217 24 216 24H214V22ZM214 28H216C217 28 220 28 220 30C220 32 217 34 216 34H214V28Z" fill="url(#textGradient)"/>
+
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF8C00"/>
+      <stop offset="1" stop-color="#FF5722"/>
+    </linearGradient>
+    <linearGradient id="textGradient" x1="60" y1="20" x2="200" y2="41" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF8C00"/>
+      <stop offset="1" stop-color="#FF5722"/>
+    </linearGradient>
+  </defs>
+</svg>

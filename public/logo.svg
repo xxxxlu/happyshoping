@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#gradient)" />
+  
+  <!-- Shopping Bag Symbol -->
+  <path d="M135 75H65C61.686 75 59 77.686 59 81V139C59 142.314 61.686 145 65 145H135C138.314 145 141 142.314 141 139V81C141 77.686 138.314 75 135 75Z" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Shopping Bag Handles -->
+  <path d="M76 70C76 58.954 85.954 49 97 49H103C114.046 49 124 58.954 124 70V80H76V70Z" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- "D" Letters (Stylized) -->
+  <path d="M75 95C75 95 85 95 85 105C85 115 75 115 75 115" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M95 95C95 95 105 95 105 105C105 115 95 115 95 115" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Checkmark for "go to buy" concept -->
+  <path d="M115 102L122 110L132 95" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#02a7a7"/>
+      <stop offset="1" stop-color="#017e7e"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -58,16 +58,29 @@ export default {
 <style scoped>
 .payment-success {
   max-width: 800px;
-  margin: 40px auto;
+  margin: 60px auto;
   padding: 20px;
+  min-height: calc(100vh - 220px);
 }
 
 .success-container {
   text-align: center;
   background-color: #fff;
-  border-radius: 8px;
-  padding: 40px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 50px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.success-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(135deg, var(--primary-light, #02a7a7), var(--primary-dark, #017e7e));
 }
 
 .success-icon {
@@ -75,21 +88,28 @@ export default {
 }
 
 h1 {
-  color: #4CAF50;
+  color: var(--primary-color, #017e7e);
   margin-bottom: 20px;
+  font-size: 2.2rem;
 }
 
 .success-message {
   font-size: 18px;
   margin-bottom: 30px;
+  color: #555;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .order-info {
   background-color: #f9f9f9;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px 0;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 30px 0;
   text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  border-left: 4px solid var(--primary-color, #017e7e);
 }
 
 .order-info h2 {
@@ -106,34 +126,40 @@ h1 {
 .action-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-top: 30px;
+  gap: 20px;
+  margin-top: 40px;
 }
 
 .button {
   display: inline-block;
-  padding: 12px 24px;
-  border-radius: 4px;
+  padding: 14px 28px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .primary {
-  background-color: #4CAF50;
+  background: linear-gradient(135deg, var(--primary-light, #02a7a7), var(--primary-dark, #017e7e));
   color: white;
 }
 
 .primary:hover {
-  background-color: #45a049;
+  background: linear-gradient(135deg, var(--primary-dark, #017e7e), var(--primary-light, #02a7a7));
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .secondary {
-  background-color: #f1f1f1;
+  background-color: #f8f9fa;
   color: #333;
+  border: 1px solid #e0e0e0;
 }
 
 .secondary:hover {
-  background-color: #e7e7e7;
+  background-color: #e9ecef;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 }
 </style>

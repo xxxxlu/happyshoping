@@ -34,7 +34,7 @@
             </div>
           </div>
         </div>
-        <p>Copyright © 2025 happyshopping Store. Powered by VertexFlow SMC Technologies Pvt Ltd</p>
+        <p>Copyright © {{ new Date().getFullYear() }} happyshopping Store. Powered by VertexFlow Technologies (SMC-Private ) limited</p>
       </div>
     </footer>
   </div>

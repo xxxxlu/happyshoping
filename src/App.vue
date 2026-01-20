@@ -34,7 +34,7 @@
             </div>
           </div>
         </div>
-        <p>Copyright © {{ new Date().getFullYear() }} happyshopping Store. Powered by VertexFlow Technologies (SMC-Private ) limited</p>
+        <p>Copyright © {{ new Date().getFullYear() }} happyshopping Store. Powered by NTN # G115295</p>
       </div>
     </footer>
   </div>
